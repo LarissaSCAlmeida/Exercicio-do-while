@@ -1,4 +1,5 @@
-/*Solicitar ao usuário até qual numero será exibido na tela (iniciar a partir do 1).*/
+/*Solicitar ao usuário até qual numero será exibido na tela (iniciar a partir do 1).
+se eu quisesser decresente era colocar n-- e o n no printf*/
 #include<stdio.h>
 int main()
 {
