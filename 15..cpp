@@ -15,5 +15,40 @@ d) Ao finalizar o algoritmo, exibir os candidatos – e as informações respectivas
 #include<stdio.h>
 int main ()
 {
+	float h=1,z=1,l=1,total,ht=0,zt=0,lt=0,voto,n=1,nt,np,hp=0,zp=0,lp=0;
+	printf("Digite seu voto: ");
+	scanf("%f", &voto);
+	do
+	{
+		printf("Digite seu voto: ");
+		scanf("%f", &voto);
+		if(voto==1)
+		{
+			ht=h+ht;		
+		} 
+		else if(voto==2)
+		{
+			zt=z+zt;
+		}
+		else if (voto==3)
+		{
+			lt=l+lt;
+		}
+		else if (voto!=1 && voto!=2 && voto!=3 && voto!=0)
+		{
+			nt=n+nt;
+		}
+	}while(voto!=0);
 	
+	total=lt+nt+zt+ht;
+	lp=(lt/total)*100;
+	np=(nt/total)*100;
+	zp=(zt/total)*100;
+	hp=(ht/total)*100;
+	printf("Total de votos: %.f\n", total);
+	printf("Total de votos de zezinho %.f com %.2f  de porcentagem\n", zt,zp);
+	printf("Total de votos de huguinho %.f com %.2f  de porcentagem\n", ht,hp);
+	printf("Total de votos de luizinho %.f com %.2f  de porcentagem\n", lt,lp);
+	printf("Total de votos de nulos %.f com %.2f  de porcentagem\n", nt,lp);
+
 }
